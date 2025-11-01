@@ -768,7 +768,9 @@ public abstract class PermanentImpl extends CardImpl implements Permanent {
             this.phasedIn = false;
             this.indirectPhase = indirectPhase;
             game.informPlayers(getLogName() + " phased out");
-            fireEvent(EventType.PHASED_OUT, game);
+            GameEvent event = GameEvent.getEvent(EventType.PHASED_OUT, this.objectId, null, this.controllerId);
+            game.fireEvent(event);
+            game.getState().addSimultaneousPhasedOutToBatch(event, game);
             return true;
         }
         return false;

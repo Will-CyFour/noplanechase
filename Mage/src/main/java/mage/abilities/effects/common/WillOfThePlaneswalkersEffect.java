@@ -31,16 +31,16 @@ public class WillOfThePlaneswalkersEffect extends OneShotEffect {
 
     @Override
     public boolean apply(Game game, Ability source) {
-        TwoChoiceVote vote = new TwoChoiceVote("Planeswalk", "Chaos", Outcome.Benefit);
-        vote.doVotes(source, game);
-        int planeswalkCount = vote.getVoteCount(true);
-        int chaosCount = vote.getVoteCount(false);
-        // TODO: Implement when planes have been refactored
-        if (planeswalkCount > chaosCount) {
-            // planeswalk to next plane
-        } else {
-            // chaos ensues
-        }
+//        TwoChoiceVote vote = new TwoChoiceVote("Planeswalk", "Chaos", Outcome.Benefit);
+//        vote.doVotes(source, game);
+//        int planeswalkCount = vote.getVoteCount(true);
+//        int chaosCount = vote.getVoteCount(false);
+//        // TODO: Implement when planes have been refactored
+//        if (planeswalkCount > chaosCount) {
+//            // planeswalk to next plane
+//        } else {
+//            // chaos ensues
+//        }
         return true;
     }
 }

@@ -492,6 +492,10 @@ public class GameEvent implements Serializable {
         BECOMES_DAY_NIGHT,
         MEDITATED,
         PHASE_OUT, PHASED_OUT,
+        /* PHASED_OUT_BATCH
+         combines all PHASED_OUT events occurring at the same time in a single batch event
+         */
+        PHASED_OUT_BATCH(true),
         PHASE_IN, PHASED_IN,
         TURN_FACE_UP, TURNED_FACE_UP,
         TURN_FACE_DOWN, TURNED_FACE_DOWN,
